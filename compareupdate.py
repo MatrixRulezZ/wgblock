@@ -9,7 +9,7 @@ def open_domain_ip_list():
     #print(list_input_ips)
 
     #пачка ипшников которые уже есть
-    output_ips=open('youtubebypass')
+    output_ips=open('output_ips.txt')
     list_output_ips = [valout.strip() for valout in output_ips]
     output_ips.close()
 
@@ -24,7 +24,7 @@ def open_domain_ip_list():
     list_output_ips.extend(delta)
 
     #перезаписываем дополняемый со списком новых ипшников
-    output_ips = open('youtubebypass','w+')
+    output_ips = open('output_ips.txt','w+')
     for val in list_output_ips:
         output_ips.write(val+'\n')
     output_ips.close()
